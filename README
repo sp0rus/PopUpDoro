@@ -1,9 +1,9 @@
-Ubuntu Pomodoro Notifier
+Ubuntu/Debian Pomodoro Notifier
 
-This program uses libnotify in ubuntu to provide you with alerts for using
-the Pomodoro technique for time management.  The benefit of using the built
-in Ubuntu notifier system is that the alerts fit in nicely with the system,
-as they are native notifications.
+This program uses libnotify to provide you with alerts for using the 
+Pomodoro technique for time management.  The benefit of using the built
+in notifier system is that the alerts fit in nicely with the system, as 
+they are native notifications.
 
 I can't take credit for the original idea, as I found the original script
 on a blog.  You can find the original script and that post here:
@@ -13,10 +13,12 @@ http://blog.ashfame.com/2011/04/pomodoro-timer-in-ubuntu/
 
 INSTRUCTIONS
 
-To run this script, you need libnotify-bin installed on your Ubuntu system.
-Simply running the following command will do install it:
+To run this script, you need libnotify-bin and aplay installed on your
+system. Simply running the following command will do install them:
 
-	apt-get install libnotify-bin
+	apt-get install libnotify-bin aplay
+
+		*aplay may already be installed on your system.
 
 Afterwards, to run the script itself, you run the command:
 
