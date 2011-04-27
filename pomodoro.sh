@@ -1,40 +1,45 @@
-#!/bin/bash
+#!/bin/sh
 
-COUNTER=0
-WORKNUMBER=4
+#Times for each segment. Measured in seconds.
+POMODORO=1500
+SHORTBREAK=300
+LONGBREAK=900
 
-while [ "$COUNTER" -lt "$WORKNUMBER" ]
-do
-	#pomodoro work timer
-	DISPLAY=:0 notify-send \
-		-t 1000 \
-		-i /home/sp0rus/Code/Bash/pomodoro/pomodoro.png \
-		"New Pomodoro starts" \
-		"You have 25 minutes to work." \
-		; aplay /usr/share/sounds/purple/login.wav
-	# 25 minutes until break
-	sleep 1500
+#number of pomodoros to complete before a long break
+LONGBREAKAFTER=4
 
-	let "COUNTER += 1"
+while [ true ]; do
+	COUNTER=0
+	while [ "$COUNTER" -lt "$LONGBREAKAFTER" ]; do
+		#pomodoro work timer
+		DISPLAY=:0 notify-send \
+			-t 1000 \
+			-i /home/sp0rus/Code/Bash/pomodoro/pomodoro.png \
+			"New Pomodoro starts" \
+			"You have 25 minutes to work." \
+			; aplay /usr/share/sounds/purple/login.wav
+		sleep $POMODORO
 
-	#pomodoro short break timer
-	DISPLAY=:0 notify-send \
-		-t 1000 \
-		-i /home/sp0rus/Code/Bash/pomodoro/pomodoro.png \
-		"Pomodoro ends" \
-		"Take a break!" \
-		; aplay /usr/share/sounds/purple/login.wav
-	#5 minutes for short break
-	sleep 300
+		COUNTER=$((COUNTER+1))
 
-done
+		if [ $COUNTER -lt $LONGBREAKAFTER ]; then
+			#pomodoro short break timer
+			DISPLAY=:0 notify-send \
+				-t 1000 \
+				-i /home/sp0rus/Code/Bash/pomodoro/pomodoro.png \
+				"Pomodoro ends" \
+				"Take five!" \
+				; aplay /usr/share/sounds/purple/login.wav
+			sleep $SHORTBREAK
+		fi
+	done #end 4 work periods
 
-#pomodoro long break
-	DISPLAY=:0 notify-send \
-		-t 1000 \
-		-i /home/sp0rus/Code/Bash/pomodoro/pomodoro.png \
-		"That's Four Pomodoros!" \
-		"Take a long break!" \
-		; aplay /usr/share/sounds/purple/login.wav
-	#15 minutes for short break
-	sleep 900
+	#pomodoro long break
+		DISPLAY=:0 notify-send \
+			-t 1000 \
+			-i /home/sp0rus/Code/Bash/pomodoro/pomodoro.png \
+			"That's Four Pomodoros!" \
+			"Take a 15 minute break" \
+			; aplay /usr/share/sounds/purple/login.wav
+		sleep $LONGBREAK
+done #end main
