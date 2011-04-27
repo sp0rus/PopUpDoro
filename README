@@ -1,0 +1,35 @@
+Ubuntu Pomodoro Notifier
+
+This program uses libnotify in ubuntu to provide you with alerts for using
+the Pomodoro technique for time management.  The benefit of using the built
+in Ubuntu notifier system is that the alerts fit in nicely with the system,
+as they are native notifications.
+
+I can't take credit for the original idea, as I found the original script
+on a blog.  You can find the original script and that post here:
+
+http://blog.ashfame.com/2011/04/pomodoro-timer-in-ubuntu/
+
+
+INSTRUCTIONS
+
+To run this script, you need libnotify-bin installed on your Ubuntu system.
+Simply running the following command will do install it:
+
+	apt-get install libnotify-bin
+
+Afterwards, to run the script itself, you run the command:
+
+	sh pomodoro.sh
+
+If you'd like the script to run in the background, so that you can close the
+terminal window, simply add "&" to the end of the command, like so:
+
+	sh pomodoro.sh &
+
+You'll need to edit the script so that the image location points to where
+you're storing the pomodoro.png image.  Otherwise, it will just run without
+the image.
+
+MORE INFORMATION
+http://www.pomodorotechnique.com/
