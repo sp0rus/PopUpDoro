@@ -7,6 +7,10 @@ POMODORO=1500
 SHORTBREAK=300
 LONGBREAK=900
 
+#Paths to external media used in alerts
+TOMATO=/home/sp0rus/Code/Bash/pomodoro/pomodoro.png
+SOUNDALERT=/usr/share/sounds/purple/login.wav
+
 #number of pomodoros to complete before a long break
 LONGBREAKAFTER=4
 
@@ -16,10 +20,10 @@ while [ true ]; do
 		#pomodoro work timer
 		DISPLAY=:0 notify-send \
 			-t 1000 \
-			-i /home/sp0rus/Code/Bash/pomodoro/pomodoro.png \
+			-i $TOMATO \
 			"New Pomodoro starts" \
 			"You have 25 minutes to work." \
-			; aplay /usr/share/sounds/purple/login.wav
+			; aplay $SOUNDALERT
 		sleep $POMODORO
 
 		COUNTER=$((COUNTER+1))
@@ -28,10 +32,10 @@ while [ true ]; do
 			#pomodoro short break timer
 			DISPLAY=:0 notify-send \
 				-t 1000 \
-				-i /home/sp0rus/Code/Bash/pomodoro/pomodoro.png \
+				-i $TOMATO \
 				"Pomodoro ends" \
 				"Take five!" \
-				; aplay /usr/share/sounds/purple/login.wav
+				; aplay $SOUNDALERT
 			sleep $SHORTBREAK
 		fi
 	done #end 4 work periods
@@ -39,9 +43,9 @@ while [ true ]; do
 	#pomodoro long break
 		DISPLAY=:0 notify-send \
 			-t 1000 \
-			-i /home/sp0rus/Code/Bash/pomodoro/pomodoro.png \
+			-i $TOMATO \
 			"That's Four Pomodoros!" \
 			"Take a 15 minute break" \
-			; aplay /usr/share/sounds/purple/login.wav
+			; aplay $SOUNDALERT
 		sleep $LONGBREAK
 done #end main
