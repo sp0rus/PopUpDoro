@@ -1,5 +1,7 @@
 #!/bin/sh
 
+#PopUpDoro - An Ubuntu/Debian Pomodoro Notifier
+
 #Times for each segment. Measured in seconds.
 POMODORO=1500
 SHORTBREAK=300
