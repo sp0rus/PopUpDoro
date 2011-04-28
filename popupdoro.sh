@@ -11,8 +11,8 @@ LONGBREAK=900
 FADEOUT=1000
 
 #Paths to external media used in alerts
-TOMATO=/home/sp0rus/Code/Bash/pomodoro/pomodoro.png
-SOUNDALERT=/usr/share/sounds/purple/login.wav
+TOMATO=$PWD/pomodoro.png
+SOUNDALERT=/path/to/yoursound.wav
 
 #number of pomodoros to complete before a long break
 LONGBREAKAFTER=4
