@@ -1,15 +1,19 @@
 Ubuntu/Debian Pomodoro Notifier
 
 This program uses libnotify to provide you with alerts for using the 
-Pomodoro technique for time management.  The benefit of using the built
-in notifier system is that the alerts fit in nicely with the system, as 
-they are native notifications.
+Pomodoro technique for time management.  The benefit of using this notifier 
+system is that the alerts fit in nicely with the system, as they look like 
+part of the OS.
 
 I can't take credit for the original idea, as I found the original script
 on a blog.  You can find the original script and that post here:
 
 http://blog.ashfame.com/2011/04/pomodoro-timer-in-ubuntu/
 
+LICENSE
+
+This project is released under GPLv3. You can find a Copy of the GPL in the
+file called LICENSE.
 
 INSTRUCTIONS
 
