@@ -11,7 +11,10 @@ LONGBREAK=900
 FADEOUT=1000
 
 #Paths to external media used in alerts
-TOMATO=$PWD/pomodoro.png
+C=$(readlink -f "$0")
+DIRC=`dirname "$C"`
+
+TOMATO=/home/sp0rus/Code/Bash/pomodoro/pomodoro.png
 SOUNDALERT=/path/to/yoursound.wav
 
 #number of pomodoros to complete before a long break
