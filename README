@@ -41,9 +41,9 @@ terminal window, simply add "&" to the end of the command, like so:
 
 	sh pomodoro.sh &
 
-You'll need to edit the script so that the image location points to where
-you're storing the pomodoro.png image.  Otherwise, it will just run without
-the image.
+You'll need to edit the script so that the path to the sound file you points 
+to where you're storing your sound.  Otherwise, it will run without sound.
+The image will run the image I've included, but you can change that as well.
 
 MORE INFORMATION
 http://www.pomodorotechnique.com/
