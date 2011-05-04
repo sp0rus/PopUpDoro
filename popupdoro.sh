@@ -2,6 +2,13 @@
 
 #PopUpDoro - An Ubuntu/Debian Pomodoro Notifier
 
+#Get current directory name
+C=$(readlink -f "$0")
+CDIR=`dirname "$C"`
+
+#source file with functions for timers
+. $CDIR/functions.sh
+
 #Times for each segment. Measured in seconds.
 POMODORO=1500
 SHORTBREAK=300
@@ -11,48 +18,24 @@ LONGBREAK=900
 FADEOUT=1000
 
 #Paths to external media used in alerts
-        #get current directory name
-        C=$(readlink -f "$0")
-        CDIR=`dirname "$C"`
-
 TOMATO=$CDIR/pomodoro.png
 SOUNDALERT=$CDIR/yoursound.wav
 
 #number of pomodoros to complete before a long break
 LONGBREAKAFTER=4
 
+#Begin main script
 while [ true ]; do
 	COUNTER=0
 	while [ "$COUNTER" -lt "$LONGBREAKAFTER" ]; do
-		#pomodoro work timer
-		DISPLAY=:0 notify-send \
-			-t $FADEOUT \
-			-i $TOMATO \
-			"New Pomodoro starts" \
-			"You have 25 minutes to work." \
-			; aplay $SOUNDALERT
-		sleep $POMODORO
-
+                pomodoro
 		COUNTER=$((COUNTER+1))
 
 		if [ $COUNTER -lt $LONGBREAKAFTER ]; then
-			#pomodoro short break timer
-			DISPLAY=:0 notify-send \
-				-t $FADEOUT \
-				-i $TOMATO \
-				"Pomodoro ends" \
-				"Take five!" \
-				; aplay $SOUNDALERT
-			sleep $SHORTBREAK
+			shortbreak
 		fi
 	done #end 4 work periods
 
-	#pomodoro long break
-		DISPLAY=:0 notify-send \
-			-t $FADEOUT \
-			-i $TOMATO \
-			"That's Four Pomodoros!" \
-			"Take a 15 minute break" \
-			; aplay $SOUNDALERT
-		sleep $LONGBREAK
+	longbreak
+		
 done #end main
