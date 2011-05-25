@@ -18,8 +18,8 @@ LONGBREAK=900
 FADEOUT=1000
 
 #Paths to external media used in alerts
-TOMATO=$CDIR/pomodoro.png
-SOUNDALERT=$CDIR/yoursound.wav
+TOMATO=$CDIR/media/pomodoro.png
+SOUNDALERT=$CDIR/media/1.wav
 
 #number of pomodoros to complete before a long break
 LONGBREAKAFTER=4
