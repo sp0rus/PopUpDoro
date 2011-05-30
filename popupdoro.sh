@@ -19,7 +19,9 @@ FADEOUT=1000
 
 #Paths to external media used in alerts
 TOMATO=$CDIR/media/pomodoro.png
-SOUNDALERT=$CDIR/media/1.wav
+POMOALERT=$CDIR/media/1.wav
+SHORTALERT=$CDIR/media/2.wav
+LONGALERT=$CDIR/media/3.wav
 
 #number of pomodoros to complete before a long break
 LONGBREAKAFTER=4
