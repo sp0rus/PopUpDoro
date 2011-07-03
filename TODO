@@ -1,2 +1,7 @@
 -Add logging functionality
+    -Add functionality to generage a web page and show stats of pomodoros you've completed
+    -Add ability to set a category when starting  pomodoros, to allow for more statistic tracking
 -Add optional command line configuration to override set config
+
+Features Under Consideration:
+-badges/achievements
