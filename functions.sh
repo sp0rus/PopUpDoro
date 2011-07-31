@@ -8,7 +8,7 @@ pomodoro()
 		-i $TOMATO \
 		"New Pomodoro starts" \
 		"You have 25 minutes to work." \
-		; aplay $POMOALERT
+		; aplay -q $POMOALERT
 	sleep $POMODORO
 }
 
@@ -20,7 +20,7 @@ shortbreak()
 		-i $TOMATO \
 		"Pomodoro ends" \
 		"Take five!" \
-		; aplay $SHORTALERT
+		; aplay -q $SHORTALERT
 	sleep $SHORTBREAK
 }
 
@@ -32,6 +32,6 @@ longbreak()
 		-i $TOMATO \
 		"That's Four Pomodoros!" \
 		"Take a 15 minute break" \
-		; aplay $LONGALERT
+		; aplay -q $LONGALERT
 	sleep $LONGBREAK
 }
