@@ -12,9 +12,9 @@ timeout = 5000
 
 #Media files to use (sounds and icon)
 tomato = os.path.abspath(os.path.curdir) + '/media/pomodoro.png'
-pomoalert = os.path.abspath(os.path.curdir) + '/media/1.wav'
-shortalert = os.path.abspath(os.path.curdir) + '/media/2.wav'
-longalert = os.path.abspath(os.path.curdir) + '/media/3.wav'
+#pomoalert = os.path.abspath(os.path.curdir) + '/media/1.wav'
+#shortalert = os.path.abspath(os.path.curdir) + '/media/2.wav'
+#longalert = os.path.abspath(os.path.curdir) + '/media/3.wav'
 
 #number of pomodoros to complete before a long break
 longbreakafter = 4

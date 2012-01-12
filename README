@@ -20,14 +20,15 @@ http://blog.ashfame.com/2011/04/pomodoro-timer-in-ubuntu/
 
 LICENSE
 
-The code in this project is released under GPLv3. You can find a Copy of the GPL in the
-file called COPYING.
+The code in this project is released under GPLv3. You can find a Copy of the GPL
+in the file called COPYING.
 
-Sound clips provided were created by John McEachin (http://www.youtube.com/user/jdmceach1),
-and are released under a Creative Commons Attribution-ShareAlike 3.0 Unported License.  
-You can find the terms of this license at http://creativecommons.org/licenses/by-sa/3.0/
-in a human-readable (non-legalspeak) form, or the full license terms in the media folder
-in a file called LICENSE.
+Sound clips provided were created by John McEachin 
+(http://www.youtube.com/user/jdmceach1), and are released under a Creative 
+Commons Attribution-ShareAlike 3.0 Unported License.  You can find the terms of
+this license at http://creativecommons.org/licenses/by-sa/3.0/ in a 
+human-readable (non-legalspeak) form, or the full license terms in the media
+folder in a file called LICENSE.
 
 INSTRUCTIONS
 
@@ -40,8 +41,8 @@ Afterwards, to run the script itself, you run the command:
 
 	python pomodoro.py
 
-You can change settings (icon, times, number of pomodoros before long breaks, etc) in the
-'settings.py' file.
+You can change settings (icon, times, number of pomodoros before long breaks,
+etc) in the 'settings.py' file.
 
 MORE INFORMATION
 http://www.pomodorotechnique.com/
