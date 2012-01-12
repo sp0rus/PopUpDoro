@@ -34,22 +34,14 @@ INSTRUCTIONS
 To run this script, you need libnotify-bin and aplay installed on your
 system. Simply running the following command will do install them:
 
-	apt-get install libnotify-bin aplay
-
-		*aplay may already be installed on your system.
+	apt-get install libnotify-bin python-notify
 
 Afterwards, to run the script itself, you run the command:
 
-	sh pomodoro.sh
+	python pomodoro.py
 
-If you'd like the script to run in the background, so that you can close the
-terminal window, simply add "&" to the end of the command, like so:
-
-	sh pomodoro.sh &
-
-You'll need to edit the script so that the path to the sound file you points 
-to where you're storing your sound.  Otherwise, it will run without sound.
-The image will run the image I've included, but you can change that as well.
+You can change settings (icon, times, number of pomodoros before long breaks, etc) in the
+'settings.py' file.
 
 MORE INFORMATION
 http://www.pomodorotechnique.com/
